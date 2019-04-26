@@ -1,0 +1,22 @@
+replace folder files to existing file    
+
+\busyQACRM\frontend\src\app\asearch
+
+then  http://localhost:4200/AsearchComponent
+
+the core code is 
+
+
+ngOnInit() {
+    this.http.get<any>("http://localhost:8080/studentstatus")
+    .subscribe(data => {
+      this.studentstatus = data;
+      console.log(data);
+    }, err => {
+      console.log(err);
+      console.log('Something went wrong!');
+    });
+  }
+
+
+you can use    variable  studentstatus in html page

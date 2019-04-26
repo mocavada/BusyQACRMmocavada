@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+.nextBlock{
+    clear: both;
+}
+
+.parent{
+    background-color: cornflowerblue;
+    color: white;    
+    padding: 10px;
+    border: 1px solid grey;
+    float: left;
+   
+}
+
+.child{
+    background-color: darkseagreen;
+    color: white;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.sibling{
+    background-color: burlywood;
+    color: white;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.yellow{
+    background-color: yellowgreen;
+    color: white;
+}
+
+body{
+    background-color: beige
+}
+
+
+

@@ -1,0 +1,59 @@
+<h2>Data submit</h2>
+
+<form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm)">
+  <ul>
+    <li>
+      <label for="movieName">Name</label>
+      <input type="text" id="movieName" name="movieName" ngModel>
+    </li>
+    <li>
+      <label for="type">Type</label>
+      <input type="radio" name="type" value="movie" checked ngModel> Movie
+      <input type="radio" name="type" value="series" ngModel> Series
+      <input type="radio" name="type" value="other" ngModel> Other
+    </li>
+    <li>
+      <label for="category">Category</label>
+      <select id="category" name="category" multiple ngModel>
+        <option value="Action">Action</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror</option>
+        <option value="Romance">Romance</option>
+      </select>
+    </li>
+    <li>
+      <label for="year">Year</label>
+      <input type="number" id="year" name="year" maxlength="4" ngModel>
+    </li>
+  </ul>
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Validation</h2>
+
+<form #validationForm="ngForm" (ngSubmit)="onSubmit(validationForm)">
+
+  <input type="text" name="someName" #someName="ngModel" ngModel minlength="2" required/>
+
+  <span [hidden]="someName.pristine || someName.valid" style="color: red">
+    Warming Msg
+  </span>
+  <br/>
+  <div>status: {{someName.pristine}}, {{someName.valid}} , {{validationForm.form.valid}}</div>
+  <button type="submit" [disabled]="!validationForm.valid">Submit</button>
+</form>
+
+<h2>Show Css</h2>
+
+<form #showCssForm="ngForm" (ngSubmit)="onSubmit(showCssForm)">
+  <input type="text" name="showCss" [(ngModel)]="modelForShowCss.showCss" #showCss required/>
+  <div>css:{{showCss.className}}</div>
+</form>
+
+<h2>Pattern Validation</h2>
+<form #patternForm="ngForm" (ngSubmit)="onSubmit(showCssForm)">
+  <input name="username" [ngModel]="modelForPattern.username" [pattern]="unamePattern" #uname="ngModel">
+  <button type="submit" [disabled]="!patternForm.form.valid">Submit</button>
+</form>

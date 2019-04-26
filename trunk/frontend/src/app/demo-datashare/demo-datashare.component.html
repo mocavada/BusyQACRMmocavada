@@ -1,0 +1,28 @@
+<!--Input, Output, ViewChild.-->
+<h2>Input</h2>
+<div class="parent">
+  <p>Parent msg:</p>
+  <app-demo-datashare-input [inputContent]="'something, something'"></app-demo-datashare-input>
+</div>
+
+<h2 class="nextBlock">Output</h2>
+<div class="parent">
+  <p>Parent msg: {{theOutput}}</p>
+  <app-demo-datashare-output (outputEvent)="outputReceiver($event)"></app-demo-datashare-output>
+</div>
+
+<h2 class="nextBlock">ViewChild</h2>
+<div class="parent">
+  Parent msg: {{parentV}}
+  <button type="submit" (click)="getFromChild()">getFromChild</button>
+  <button type="submit" (click)="sendToChild()">sendToChild</button>
+  <app-demo-datashare-viewchild></app-demo-datashare-viewchild>
+</div>
+
+<h2 class="nextBlock">Service</h2>
+<div class="parent">
+  <p>Parent msg: {{message}}: </p>
+  <p>another msg: {{anotherMessage}}</p>
+  <app-demo-datashare-service></app-demo-datashare-service>
+  <app-demo-datashare-sibling></app-demo-datashare-sibling>
+</div>

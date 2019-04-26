@@ -1,0 +1,28 @@
+<h4>Welcome to Admin Panel</h4>
+<button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>E-mail</th>
+      <th>Roles</th>
+      <th>Teams</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.id}}</td>
+      <td class="hidden">{{user.password}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.roles}}</td>
+      <td>{{user.teams}} </td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+{{errorMessage}}

@@ -1,0 +1,29 @@
+/* input.ng-invalid.ng-touched{
+    border: 1px solid red
+} */
+
+/* select.ng-invalid.ng-touched{
+    border: 1px solid red
+} */
+
+/* .help-block{
+    color: red
+  } */
+
+h2{
+    color: whitesmoke;
+    text-align: center;
+    font-family: Cambria;
+    background-color: gray;
+     
+    
+}
+
+/* .alert{
+    background: #f2edda;
+    padding: 7px;
+    font-size: .7em;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: 2s alertAnim forwards;
+} */

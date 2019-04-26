@@ -1,0 +1,51 @@
+<input type="file" id="files" (change)="onFileChanged($event)" />
+<!-- <mat-form-field>
+  <input matInput id="firstName" placeholder="Enter here" name="search" [(ngModel)]="searchString">
+  <mat-hint>Hint:Enter valid name/studentEmail/phone</mat-hint>
+</mat-form-field> -->
+
+
+<!-- <button type="button" mat-raised-button color="accent" (click)="onSearch()">
+  Search
+</button> -->
+<!-- table for file upload data view -->
+<table *ngIf="tableflag" class="table table-hover ">
+  <thead class="thead thead-dark">
+    <tr>
+
+      <!-- <th>Id</th> -->
+      <!-- <th>Update Record</th>
+        <th>Delete Record</th> -->
+
+      <th>Name</th>
+      <th>CourseType</th>
+      <th>Comments</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Remarks</th>
+      
+
+
+    </tr>
+
+  </thead>
+  <tr *ngFor="let sr of csvFileData, let i=index">
+    
+    <!-- <td>
+          <button mat-raised-button color="yarn" (click)="onUpdate(sp)">Update</button>
+      </td>
+      <td>
+        <button mat-raised-button color="warn" (click)="onDelete(sp)">Delete</button>
+      </td> -->
+
+    <!-- <td>{{sr.id}}</td> -->
+    <td>{{sr.name}}</td>
+    <td>{{sr.course}}</td>
+    <td>{{sr.comments}}</td>
+    <td>{{sr.studentEmail}}</td>
+    <td>{{sr.studentContact}}</td>
+    <td>{{sr.remarks}}</td>
+    
+
+  </tr>
+  </table>

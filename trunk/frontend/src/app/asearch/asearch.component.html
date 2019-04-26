@@ -1,0 +1,155 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+        <span class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="deleteFlag">
+            {{deleteMessage}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </span>
+    
+        <form class="form-inline"  (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        
+                   
+          <mat-form-field>
+            <input matInput id="firstName" placeholder="first name" name="search"
+            [(ngModel)] = "term">
+            <mat-hint>Hint:Enter Email or phone number or just click Search</mat-hint>
+          </mat-form-field>
+    
+    
+          <button type="submit" mat-raised-button color="accent">
+            Search
+          </button>
+    
+        </div>
+       
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+  <hr />
+  <div class="row">
+      <!-- <div class="col"> -->
+  <table *ngIf="tableflag" class="table table-hover ">
+    
+
+          <thead class="thead thead-dark">
+              <tr>
+        
+                  <th>Id</th>
+                <th>Update Record</th>
+                <th>Delete Record</th>
+        
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Remarks</th>
+                <th>Course Type</th>
+                <th>Comments</th>
+        
+                
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Batch</th>
+                <th>Year</th>
+                
+                
+        
+              </tr>
+        
+            </thead>
+            <tr *ngFor="let sp of studentprofile, let i=index">
+                <td>{{sp.id}}</td>
+              <td>
+                  <button mat-raised-button color="yarn" (click)="onUpdate(sp)">Update</button>
+              </td>
+              <td>
+                <button mat-raised-button color="warn" (click)="onDelete(sp)">Delete</button>
+              </td>
+             
+        
+              <td>{{sp?.name}}</td>
+              <td>{{sp?.studentEmail}}</td>
+              <td>{{sp?.studentContact}}</td>
+              <td>{{sp?.remarks}}</td>
+              <td>{{sp?.course}}</td>
+              <td>{{sp?.comments}}</td>
+        
+              <td >{{sp?.firstName}}</td>
+              <td >{{sp?.lastName}}</td>
+              <td>{{sp?.studentCourseType?.courseType}}</td>
+              <td >{{sp?.studentStatus?.studentStatus}}</td>
+              <td >{{sp?.studentBatch?.studentBatch}}</td>
+              <td >{{sp?.studentYear?.year}}</td>
+            </tr>
+          </table>
+
+
+
+      <!-- </div> -->
+    </div>
+    <!-- <thead class="thead thead-dark">
+      <tr>
+
+          <th>Id</th>
+        <th>Update Record</th>
+        <th>Delete Record</th>
+
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Remarks</th>
+        <th>Course Type</th>
+        <th>Comments</th>
+
+        
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Course</th>
+        <th>Status</th>
+        <th>Batch</th>
+        <th>Year</th>
+        
+        
+
+      </tr>
+
+    </thead>
+    <tr *ngFor="let sp of studentprofile, let i=index">
+        <td>{{sp.id}}</td>
+      <td>
+          <button mat-raised-button color="yarn" (click)="onUpdate(sp)">Update</button>
+      </td>
+      <td>
+        <button mat-raised-button color="warn" (click)="onDelete(sp)">Delete</button>
+      </td>
+     
+
+      <td>{{sp?.name}}</td>
+      <td>{{sp?.studentEmail}}</td>
+      <td>{{sp?.studentContact}}</td>
+      <td>{{sp?.remarks}}</td>
+      <td>{{sp?.course}}</td>
+      <td>{{sp?.comments}}</td>
+
+      <td >{{sp?.firstName}}</td>
+      <td >{{sp?.lastName}}</td>
+      <td>{{sp?.studentCourseType?.courseType}}</td>
+      <td >{{sp?.studentStatus?.studentStatus}}</td>
+      <td >{{sp?.studentBatch?.studentBatch}}</td>
+      <td >{{sp?.studentYear?.year}}</td>
+    </tr> -->
+
+
+  
+
+  
+</div>

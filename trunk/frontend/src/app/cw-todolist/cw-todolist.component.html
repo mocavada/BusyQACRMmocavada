@@ -1,0 +1,14 @@
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="What you are going to do?" [(ngModel)]="inComingItem">
+  <div class="input-group-append">
+    <button class="btn btn-outline" type="button" (click)="onAdd()">Add</button>
+  </div>
+</div>
+
+<ul class="list-group" *ngFor="let item of todoList; let i = index">
+  <li class="list-group-item">{{i}}: {{item}}
+    <button class="btn btn-outline float-right" type="button" (click)="onRemove(i)">Remove</button>
+  </li>
+</ul>
+
+<!-- {{todoList|json}} -->

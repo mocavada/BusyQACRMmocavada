@@ -1,0 +1,17 @@
+p{
+    color: green;
+}
+#byID{
+    color: red;
+}
+.byClass{
+    color: blue;
+}
+
+p, #byID, .byClass{
+    background-color: black;
+}
+a:not(:hover){
+    color: green;
+    text-decoration: none;
+}

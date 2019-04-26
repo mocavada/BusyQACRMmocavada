@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg  navbar navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="">Welcome</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a routerLinkActive="active" class="nav-link" [routerLink]="['DemoCsvComponent']">CSV</a>
+      </li>
+	  <li class="nav-item">
+        <a routerLinkActive="active" class="nav-link" [routerLink]="['AsearchComponent']" >SEARCH</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['AregisterComponent']" routerLinkActive="active">REGISTER</a>
+        </li>
+      
+      <!-- Form -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          href="#">
+          Form
+        </a> -->
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <a class="dropdown-item" [routerLink]="['Form','FormModel']">Add a student</a>
+        </div>
+      </li> -->
+   
+
+<!-- <a class="dropdown-item" [routerLink]="['Form','FormTemplate']">Template</a> -->
+       
+    </ul>
+
+  </div>
+</nav>
+<div class="container">
+
+
+  <br/>
+  <router-outlet></router-outlet>
+  <br/>
+</div>
+
+
+<!-- <button routerLink="">Welcome Page</button>
+<button [routerLink]="['HtmlCss']">HTML & CSS</button>
+<button [routerLink]="['Typescript']">Typescript</button>
+<button [routerLink]="['DataBind']">DataBind</button>
+<button [routerLink]="['DataShare']">DataShare</button>
+<button [routerLink]="['Pipe']">Pipe</button>
+
+<button routerLink="RoutingParameter/gaming/1">Gaming Product</button>
+<button [routerLink]="[ 'RoutingParameter', 'home', '2', {option1:'o1', option2:'o2'}]">Home Product</button>
+
+<button [routerLink]="['Directive','DirectiveBuildin']">Buildin Directive</button>
+<button [routerLink]="['Directive','DirectiveStructural']">Structural Directive </button>
+<button [routerLink]="['Directive','DirectiveAttribute']">Attribute Directive </button>
+
+<button [routerLink]="['Form','FormTemplate']">Form Template</button>
+<button [routerLink]="['Form','FormModel']">Form Model</button>
+
+<button [routerLink]="['HttpClient']">HttpClient</button> -->
+
+
+
+<!-- <br style="clear: both;" />
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div> -->

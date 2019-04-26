@@ -1,0 +1,128 @@
+<a href="a.html">link</a>
+<a href="x.xml">link</a>
+<a href="c.html">link</a>
+<a href="h">link</a>
+<p s="a"> Your content </p>
+<p id="byID"> Your content </p>
+<p class="byClass"> Your content </p>
+
+<!-- inline elements -->
+<span> inline tags </span>
+<img src="../../assets/img-example.png" width="100px" />
+<span> inline tags </span>
+
+<hr/>
+
+<!-- block elements -->
+<div>block tags</div>
+<div>block tags</div>
+
+<!-- nested tags -->
+<div>
+  <h1> Your header </h1>
+  <div> Your Content </div>
+</div>
+
+<!-- lists -->
+<ul style="list-style: none">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+
+<ol>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ol>
+
+<hr/>
+<!-- form -->
+<form name="" action="default_itself.html" method="get" target="_blank">
+  <fieldset disabled>
+    <input type="" name="" disabled readonly autofocus>
+  </fieldset>
+
+  <!--text-->
+  <fieldset>
+    <label for="forText">Name:</label>
+    <input type="text" maxlength="" size="" value="" placeholder="" id="forText" />
+    <label>Textarea:</label>
+    <textarea cols="" rows="" wrap="hard/soft" placeholder="abc"></textarea>
+  </fieldset>
+
+  <!--tick-->
+  <fieldset>
+    <legend>radio button:</legend>
+    <input type="radio" value="1" name="the_same_name" checked/>
+    <label>op1</label>
+    <input type="radio" value="2" name="the_same_name" checked/>
+    <label>op2</label>
+    <input type="radio" value="3" name="the_same_name" checked/>
+    <label>op3</label>
+  </fieldset>
+
+  <!--tick-->
+  <fieldset>
+    <legend>check box:</legend>
+    <input type="checkbox" value="1" name="different_name" checked/>
+    <label>op1</label>
+    <input type="checkbox" value="2" name="different_name" checked/>
+    <label>op2</label>
+    <input type="checkbox" value="3" name="different_name" checked/>
+    <label>op3</label>
+  </fieldset>
+
+  <!--list-->
+  <fieldset>
+    <select size="10" multiple>
+      <optgroup label="Car">
+        <option value="1" selected>Volvo</option>
+        <option value="2">Ford</option>
+      </optgroup>
+      <optgroup label="Cell Phone">
+        <option value="1" selected>Apple</option>
+        <option value="2">Samsung</option>
+      </optgroup>
+    </select>
+  </fieldset>
+</form>
+
+<hr/>
+
+<!--file-->
+<form enctype="multipart/form-data">
+  <input type="file" accept="*/*, image/jpeg">
+</form>
+
+<hr/>
+<!--<form novalidate>-->
+<form>
+  <!--validation-->
+  <fieldset>
+    <label>Javascipt:</label>
+    <input type="text" autocomplete="on" required oninvalid="this.setCustomValidity('MSG')">
+    <label>Pattern:</label>
+    <input pattern="[A-Za-z]{3}" required title="Move over text: Three letter country code">
+  </fieldset>
+
+  <!--datalist-->
+  <fieldset>
+    <legend>datalist</legend>
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      <option value="Internet Explorer"></option>
+      <option value="Firefox"></option>
+      <option value="Firefox"></option>
+    </datalist>
+  </fieldset>
+
+  <!--4 buttons element or block-->
+  <fieldset>
+    <input type="submit" />
+    <input type="reset" />
+    <input type="button" value="Button name" />
+    <input type="image" src="../../assets/img-example.png" alt="" width="50px" />
+    <button type="">Button name</button>
+  </fieldset>
+</form>

@@ -1,0 +1,24 @@
+<div>
+  <p>One Way Bind: Interpolation: {{messageValue}}! </p>
+
+  <label>One Way Bind: Property: </label>
+  <input [ngModel]="messageValue" placeholder="One Way Bind" style="width: 250px" />
+  <br/>
+
+  <label>One Way Bind: Event: </label>
+  <button type="submit" (click)="processString('From Template')">Change</button>
+  <br/>
+
+
+  <label>Tow Way Bind: </label>
+  <input [(ngModel)]="messageValue" placeholder="Tow Way Bind" style="width: 250px" />
+  <br/>
+</div>
+
+<!-- <div>
+  <p> {{messageValue}}! </p>
+  <input [ngModel]="messageValue"/>
+  <button (click)="processString('From Template')">
+  <input [(ngModel)]="messageValue"/>
+</div> -->
+

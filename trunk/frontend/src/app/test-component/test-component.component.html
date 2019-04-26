@@ -1,0 +1,8 @@
+<form>
+  <label>Email</label>
+  <input type="studentEmail" #studentEmail>
+  <label>Password</label>
+  <input type="password" #password>
+  <button type="button" (click)="login(studentEmail.value, password.value)" [disabled]="!enabled" #submitButton>Login
+  </button>
+</form>

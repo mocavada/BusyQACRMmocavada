@@ -1,0 +1,421 @@
+<!-- <div class="container">
+
+  <span class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="registerSuccessMessageFlag">
+    {{registerSuccessMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+  <span class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="registerErrorMessageFlag">
+    {{registerErrorMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+  <span class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="registerErrorMessageEmailMatchFlag">
+    {{registerErrorEmailMatchMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span> -->
+
+<!-- <span class="alert" *ngIf="registerSuccessMessageFlag">
+      <br>
+      {{registerSuccessMessage}}
+    </span>
+    <span class="alert" *ngIf="registerErrorMessageFlag">
+      <br>
+      {{registerErrorMessage}}
+    </span> -->
+
+<!-- <br>
+  <br>
+
+  <h2>Registration Form</h2>
+  <br>
+  <br>
+
+  <form class="form-group" [formGroup]="studentRegistrationform" (ngSubmit)="onSubmit()"> -->
+<!-- <form class="form-group" [formGroup]="jobCreateForm" (ngSubmit)="onSubmit(jobCreateForm)"> -->
+
+
+
+<!-- <div class="row">
+
+      <div class="col-6">
+
+        <div class="form-group">
+
+
+          <mat-form-field>
+            <input matInput id="firstName" placeholder="First Name" class="form-control" formControlName="firstName">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput id="lastName" placeholder="Last Name" class="form-control" formControlName="lastName">
+          </mat-form-field>
+
+          
+          <br>
+          <span *ngIf="firstName?.invalid && firstName?.touched" class="alert">Please enter valid first name <br></span>
+          <span *ngIf="lastName?.invalid && lastName?.touched" class="alert">Please enter valid last name <br></span>
+        </div> -->
+
+
+
+
+<!-- <div class="form-group">
+
+          <mat-form-field>
+            <input matInput id="studentEmail" placeholder="Email address" class="form-control" formControlName="studentEmail">
+          </mat-form-field>
+         
+          <span *ngIf="studentEmail?.invalid && studentEmail?.touched" class="alert">Please enter valid Email address</span>
+          
+        </div>
+
+        <div class="form-group">
+
+          <mat-form-field>
+            <input matInput id="studentContact" class="form-control" formControlName="studentContact" placeholder="Home/Cell Phone no.">
+          </mat-form-field> -->
+
+<!-- <span *ngIf="studentContact?.invalid && studentContact?.touched" class="alert">Please enter valid
+            contact(10 digits)</span> -->
+<!-- </div> -->
+
+
+
+<!-- <div formGroupName="studentCourseType">
+
+          <div class="form-group">
+
+
+             <mat-form-field>
+              <mat-select formControlName="id" placeholder="Choose Course..." required>
+                <mat-option>Choose Course...</mat-option>
+                <mat-option class="form-control" *ngFor="let item of courseTypes; let i = index" value="{{i+1}}" id="course{{i}}">{{item?.courseType}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="id.hasError('required')">Please choose a course</mat-error>
+            </mat-form-field>
+            </div>            
+        </div> -->
+
+
+
+
+<!-- <div class="form-group">
+          <mat-form-field>
+            <mat-select formControlName="studentCourseType" placeholder="Choose Course..." required>
+              <mat-option>Choose Course...</mat-option>
+              <mat-option class="form-control" *ngFor="let item of courseTypes; let i = index" value="{{i+1}}" id="course{{i}}">{{item?.courseType}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentCourseType?.hasError('required')">Please choose a course</mat-error>
+          </mat-form-field>
+        </div> -->
+
+
+
+
+<!-- <div formGroupName="studentStatus">
+
+          <mat-form-field>
+            <mat-select formControlName="id" placeholder="Choose Status..." required>
+              <mat-option>Choose Status...</mat-option>
+              <mat-option *ngFor="let item of statusTypes; let i = index" id="studentStatus{{i}}" value="{{i+1}}" class="form-control">{{item?.studentStatus}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="id?.hasError('required')">Please choose a Status</mat-error>
+          </mat-form-field>
+        </div> -->
+
+
+
+
+<!-- <div class="form-group">
+          <mat-form-field>
+            <mat-select formControlName="studentStatus" placeholder="Choose Status..." required>
+              <mat-option>Choose Status...</mat-option>
+              <mat-option *ngFor="let item of statusTypes; let i = index" id="studentStatus{{i}}" value="{{i+1}}" class="form-control">{{item?.studentStatus}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="studentStatus?.hasError('required')">Please choose a Status</mat-error> 
+          </mat-form-field>
+        </div> -->
+
+
+
+
+<!-- <div *ngIf="StatusValueflag" formGroupName="studentBatch">
+          <mat-form-field>
+            <mat-select formControlName="id" placeholder="Choose Batch...">
+              <mat-option>Choose Batch...</mat-option>
+              <mat-option *ngFor="let item of batchTypes; let i = index" id="studentBatch{{i}}" value="{{i+1}}" class="form-control">{{item?.studentBatch}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="id?.hasError('required')">Please choose a Batch</mat-error>
+          </mat-form-field>
+          <span *ngIf="studentBatch.invalid && studentBatch.touched" class="alert">Please choose batch</span>
+        </div> -->
+
+<!-- <div class="form-group">
+          <div *ngIf="StatusValueflag">
+            <mat-form-field>
+              <mat-select formControlName="studentBatch" placeholder="Choose Batch...">
+                <mat-option>Choose Batch...</mat-option>
+                <mat-option *ngFor="let item of batchTypes; let i = index" id="studentBatch{{i}}" value="{{i+1}}" class="form-control">{{item?.studentBatch}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="studentBatch?.hasError('required')">Please choose a Batch</mat-error>
+            </mat-form-field>
+            <span *ngIf="studentBatch.invalid && studentBatch.touched" class="alert">Please choose batch</span> 
+          </div>
+        </div> -->
+
+
+
+
+<!-- <div *ngIf="StatusValueflag" formGroupName="studentYear">
+
+          <div class="form-group">
+
+            <mat-form-field>
+              <mat-select formControlName="id" placeholder="Choose Year...">
+                <mat-option>Choose Year...</mat-option>
+                <mat-option *ngFor="let item of yearsList; let i = index" id="studentYear{{i}}" value="{{i+1}}" class="form-control">{{item?.year}}</mat-option>
+                <mat-error *ngIf="id?.hasError('required')">Please choose a year</mat-error>
+              </mat-select>
+            </mat-form-field>
+
+
+          </div>
+        </div> -->
+
+<!-- <div class="form-group">
+          <div *ngIf="StatusValueflag">
+
+            <mat-form-field>
+              <mat-select formControlName="studentYear" placeholder="Choose Year...">
+                <mat-option>Choose Year...</mat-option>
+                <mat-option *ngFor="let item of yearsList; let i = index" id="studentYear{{i}}" value="{{i+1}}" class="form-control">{{item?.year}}</mat-option>
+                <mat-error *ngIf="studentYear?.hasError('required')">Please choose a year</mat-error> 
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+        </div> -->
+
+
+
+<!-- <button type="submit" mat-raised-button color="accent" [disabled]="!this.studentRegistrationform.valid">Add
+          Record</button>
+        <button type="button" mat-raised-button color="warn" (click)="onNewRecord()">New Record</button>
+      </div> -->
+
+<!-- <div class="col-6">
+
+
+        <mat-form-field>
+          <textarea matInput rows="5" class="form-control" formControlName="comments" placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+
+  </form> -->
+
+<!-- <span class="alert" *ngIf="contactAndEmailValidationMessageFlag">
+    <br>
+    {{contactAndEmailValidationMessage}}
+  </span>
+
+  <span class="alert" *ngIf="registerSuccessMessageFlag">
+    <br>
+    {{registerSuccessMessage}}
+  </span>
+  <span class="alert" *ngIf="registerErrorMessageFlag">
+    <br>
+    {{registerErrorMessage}}
+  </span> -->
+<!-- </div> -->
+
+
+
+
+<div class="container-fluid">
+
+  <span class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="registerSuccessMessageFlag">
+    {{registerSuccessMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+  <span class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="registerErrorMessageFlag">
+    {{registerErrorMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+  <span class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="registerErrorMessageEmailMatchFlag">
+    {{registerErrorEmailMatchMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </span>
+
+  <!-- <span class="alert" *ngIf="registerSuccessMessageFlag">
+      <br>
+      {{registerSuccessMessage}}
+    </span>
+    <span class="alert" *ngIf="registerErrorMessageFlag">
+      <br>
+      {{registerErrorMessage}}
+    </span> -->
+
+  <br>
+  <br>
+
+  <h2>Registration Form</h2>
+  <br>
+  <br>
+
+  <form class="form-group" [formGroup]="studentRegistrationform" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+
+
+          <mat-form-field>
+            <input matInput id="firstName" placeholder="First Name" class="form-control" formControlName="firstName">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput id="lastName" placeholder="Last Name" class="form-control" formControlName="lastName">
+          </mat-form-field>
+          
+        </div>
+        <!-- <span *ngIf="firstName.touched && firstName.invalid || lastName.touched && lastName.invalid" class="alert">Please enter valid name</span> -->
+
+
+
+
+        <div class="form-group">
+
+          <mat-form-field>
+            <input matInput id="studentEmail" placeholder="Email address" class="form-control" formControlName="studentEmail">
+          </mat-form-field>
+          <!-- </div> -->
+          <!-- <span *ngIf="studentEmail.invalid && studentEmail.touched" class="alert">Please enter valid em</span> -->
+        </div>
+
+        <div class="form-group">
+
+          <mat-form-field>
+            <input matInput id="studentContact" class="form-control" formControlName="studentContact" placeholder="Home/Cell Phone no.">
+          </mat-form-field>
+
+          <span *ngIf="studentContact.invalid && studentContact.touched" class="alert">Please enter valid
+            contact(10 digits)</span>
+        </div>
+
+
+
+        <div formGroupName="studentCourseType">
+
+          <div class="form-group">
+
+
+            <mat-form-field>
+              <mat-select formControlName="id" placeholder="Choose Course..." required>
+                <mat-option>Choose Course...</mat-option>
+                <mat-option class="form-control" *ngFor="let item of courseTypes; let i = index" value="{{i+1}}" id="courseType{{i}}">{{item.courseType}}</mat-option>
+              </mat-select>
+              <!-- <mat-error *ngIf="id.hasError('required')">Please choose a course</mat-error> -->
+            </mat-form-field>
+
+          </div>
+        </div>
+
+
+        <div formGroupName="studentStatus">
+
+          <mat-form-field>
+            <mat-select formControlName="id" placeholder="Choose Status..." required>
+              <mat-option>Choose Status...</mat-option>
+              <mat-option *ngFor="let item of statusTypes; let i = index" id="studentStatus{{i}}" value="{{i+1}}" class="form-control">{{item.studentStatus}}</mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="id.hasError('required')">Please choose a Status</mat-error> -->
+          </mat-form-field>
+        </div>
+
+
+        <div *ngIf="StatusValueflag" formGroupName="studentBatch">
+          <mat-form-field>
+            <mat-select formControlName="id" placeholder="Choose Batch...">
+              <mat-option>Choose Batch...</mat-option>
+              <mat-option *ngFor="let item of batchTypes; let i = index" id="studentBatch{{i}}" value="{{i+1}}" class="form-control">{{item.studentBatch}}</mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="id.hasError('required')">Please choose a Batch</mat-error> -->
+          </mat-form-field>
+          <!-- <span *ngIf="studentBatch.invalid && studentBatch.touched" class="alert">Please choose batch</span> -->
+        </div>
+
+        <div *ngIf="StatusValueflag" formGroupName="studentYear">
+
+          <div class="form-group">
+
+            <mat-form-field>
+              <mat-select formControlName="id" placeholder="Choose Year...">
+                <mat-option>Choose Year...</mat-option>
+                <mat-option *ngFor="let item of yearsList; let i = index" id="studentYear{{i}}" value="{{i+1}}" class="form-control">{{item.year}}</mat-option>
+                <!-- <mat-error *ngIf="id.hasError('required')">Please choose a year</mat-error> -->
+              </mat-select>
+            </mat-form-field>
+
+
+          </div>
+        </div>
+
+        <button type="submit" mat-raised-button color="accent" [disabled]="!this.studentRegistrationform.valid">Add
+          Record</button>
+        <!-- <button type="button" mat-raised-button color="warn" (click)="onNewRecord()">New Record</button> -->
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+
+
+            <label for="comments">Comment:</label>
+            <textarea class="form-control" rows="14" formControlName="comments" placeholder="Leave a comment(Optional)"></textarea>
+          
+
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-6">
+            <label for="comments">Remarks:</label>
+            <textarea class="form-control" rows="4" formControlName="remarks" placeholder="Leave remarks(Optional)"></textarea>
+  
+        </div>
+      </div>
+
+
+  </form>
+
+  <span class="alert" *ngIf="contactAndEmailValidationMessageFlag">
+    <br>
+    {{contactAndEmailValidationMessage}}
+  </span>
+
+  <!-- <span class="alert" *ngIf="registerSuccessMessageFlag">
+    <br>
+    {{registerSuccessMessage}}
+  </span>
+  <span class="alert" *ngIf="registerErrorMessageFlag">
+    <br>
+    {{registerErrorMessage}}
+  </span> -->
+
+</div>
+
+

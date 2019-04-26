@@ -1,0 +1,44 @@
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+#build/classes
+#build/distributions
+#build/libs
+#build/reports
+#build/resources
+#build/test-results
+#build/temp
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+### ANgular ###
+frontedn/node_modules
+
+# Java
+*.class
+*.ear
+
+# Build
+out
+bin

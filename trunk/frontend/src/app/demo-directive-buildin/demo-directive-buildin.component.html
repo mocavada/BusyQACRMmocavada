@@ -1,0 +1,33 @@
+<h1>Attribute directives:</h1>
+<div [hidden]="!conditionExp">NotHidden</div>
+<div [ngClass]="{'yellow': conditionExp}">Yellow</div>
+<div [style.font-size.em]="'3'">size 3</div>
+<div [ngStyle]="blueStyle">Blue</div>
+<div [ngStyle]="setRedStyle()">Red</div>
+
+<hr/>
+
+<h1>Structural directives:</h1>
+<!--Condition-->
+<ng-template [ngIf]="conditionExp">NotHidden</ng-template>
+<div *ngIf="conditionExp">NotHidden</div>
+
+<!--Condition-->
+<div [ngSwitch]="selectionExp">
+  <ng-template [ngSwitchCase]="1">1</ng-template>
+  <ng-template ngSwitchCase="2">2</ng-template>
+  <ng-template ngSwitchDefault>999</ng-template>
+</div>
+
+<!--Loop-->
+<ul>
+  <ng-template ngFor let-item let-i="index" [ngForOf]="list">
+    <li>
+      {{i}}: {{item}}
+    </li>
+  </ng-template>
+</ul>
+
+<ul>
+  <li *ngFor="let item of list; let i = index">{{i}}:{{item}}</li>
+</ul>

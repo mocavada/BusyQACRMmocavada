@@ -1,0 +1,50 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit User</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+      <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name" readonly="true">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Password:</label>
+          <input type="password" formControlName="password" placeholder="" name="password" class="form-control" id="password" readonly="true">
+        </div>
+
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" >
+      </div>
+
+      <div class="form-group">
+          <label for="email">E-Mail:</label>
+          <input type="text" formControlName="email" placeholder="email" name="email" class="form-control" id="email" >
+        </div>
+
+        <div class="form-group">
+            <label for="roles">Roles:</label>
+            <select formControlName="roles" placeholder="roles" name="roles" class="form-control" id="roles" >
+                    <option value="ROLE_USER">ROLE_USER</option>
+                    <option value="ROLE_PM">ROLE_PM</option>
+                    <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+          </select>
+          </div>
+
+          <div class="form-group">
+              <label for="teams">Teams:</label>
+              <select formControlName="teams" placeholder="teams" name="teams" class="form-control" id="teams" >
+                <option value="TEAM_SALES">TEAM_SALES</option>
+                <option value="TEAM_ACCOUNTS">TEAM_ACCOUNTS</option>
+                <option value="TEAM_ADMIN">TEAM_ADMIN</option>
+                <option value="TEAM_UNASSIGNED">TEAM_UNASSIGNED</option>
+         </select>
+         </div>
+          
+  
+   <button class="btn btn-success">Update</button>
+    </form>
+  </div>
+  
